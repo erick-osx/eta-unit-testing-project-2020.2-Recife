@@ -1,13 +1,29 @@
 package school.cesar.eta.unit;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
+
+
+@ExtendWith(MockitoExtension.class)
 public class PersonTest {
+
+    Person person = new Person();
     @Test
     public void getName_firstNameJonLastNameSnow_jonSnow() {
-        fail();
+
+        //fail();
+        //Person person = new Person();
+
+        person.setName("Jon");
+        person.setLastName("Snow");
+
+        assertEquals(person.getName(),"Jon Snow");
     }
 
     @Test
